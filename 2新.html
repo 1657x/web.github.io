@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Document</title>
+<style>
+
+
+body {
+    background-image: url('');
+    background-size: cover; /* 默认情况下，使背景图像铺满整个屏幕 */
+}
+
+/* 对于小屏幕设备，调整背景图片的大小以减少失真 */
+@media (max-width: 768px) {
+    body {
+        background-size: contain;
+    }
+}
+*{
+
+margin: 0;
+
+padding: 0;
+
+text-decoration: none;
+
+list-style: none;
+
+}
+
+
+
+    
+        .div1{
+                max-width: 9999px;/* 设置最大宽度 */
+                margin: auto;/* 让div居中 */
+        }
+
+        .nav{
+            float: left;
+            width: 100%;
+            box-sizing: border-box;
+            background-size: cover; 
+            background-color: rgba(255, 255, 255, 0); 
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+
+        }
+
+
+        /* .nav{ */
+        /* background-image: url('https://ts2.cn.mm.bing.net/th?id=OIP-C.Ka4q40gBcWixB-LJbuHfxwHaFj&w=288&h=216&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2'); */
+        /* background-size: cover; 
+        background-color: rgba(255, 255, 255, 0.5);  */
+        /* 设置背景颜色为白色并设置透明度为50% */
+        /* text-align: center; */
+        /* } */
+        .nav a:hover{
+
+        background: #ce4924;
+        color: #04f90c;
+
+        }
+
+        .nav a{
+
+        color: #030114;
+
+        padding: 10px 20px;
+
+        display: inline-block;/* 让链接以块的形式显示 */
+
+        }
+
+.logo img {
+  max-width: 60px; /* 设置logo的最大宽度 */
+  height: auto;
+  border-radius: 50%; /* 将图像修改为圆形 */
+}
+
+
+
+
+/* 居中滑动 */
+    #banner{
+
+width: 800px;
+
+height: 400px;
+
+overflow: hidden;
+
+border: 2px solid #999;
+
+position: relative;
+margin: 0 auto;
+
+}
+
+#banner img{
+
+width: 800px;
+
+height: 400px;
+
+}
+
+#imglist{
+
+width: 4000px;
+
+height: 400px;
+
+}
+
+#imglist li{
+
+float: left;
+
+}
+
+#icolist{
+
+position: absolute;
+
+right: 10px;
+
+bottom: 10px;
+
+}
+
+#icolist li{
+
+float: left;
+
+width: 30px;
+
+height: 30px;
+
+border-radius: 50%;
+
+background: #666;
+
+color: #fff;
+
+margin-left: 5px;
+
+text-align: center;
+
+line-height: 30px;
+
+cursor: pointer;
+
+}
+
+.prev{
+
+background: #666;
+
+height: 40px;
+
+width: 30px;
+
+position: absolute;
+
+left: 5px;
+
+top: 45%;
+
+color: #fff;
+
+line-height: 40px;
+
+text-align: center;
+
+cursor: pointer;
+
+}
+
+.next{
+
+background: #666;
+
+height: 40px;
+
+width: 30px;
+
+position: absolute;
+
+right: 5px;
+
+top: 45%;
+
+color: #fff;
+
+line-height: 40px;
+
+text-align: center;
+
+cursor: pointer;
+
+}
+
+.footer{
+
+padding: 10px;
+
+background: #ccc;
+
+text-align: center;
+
+}
+/* 左图右文 */
+
+#home {
+            display: flex;
+            align-items: center; /* 垂直居中 */
+            justify-content: center; /* 水平居中 */
+        }
+
+        #home img {
+            width: 300px; /* 图片宽度 */
+            margin-right: 20px; /* 图片与文本间隔 */
+        }
+
+        #home div {
+            width: 50%; /* 文本区域宽度 */
+        }
+
+
+
+
+
+
+</style>
+
+
+
+</head>
+
+<body>
+    <!-- 导航栏 -->
+
+    <div class="div1">
+    
+        <div class="nav">
+            <div class="logo">
+                <img src="tou.jpg" alt="Logo">
+            <a href="E">导航项</a>
+            <a href="https://img-baofun.zhhainiao.com/pcwallpaper_ugc/static/6911cc8d8802d20627b9a30bdb6f8643.jpg?x-oss-process=image%2fresize%2cm_lfit%2cw_1920%2ch_1080">导航项</a>
+            <a href="https://img-baofun.zhhainiao.com/pcwallpaper_ugc/static/6911cc8d8802d20627b9a30bdb6f8643.jpg?x-oss-process=image%2fresize%2cm_lfit%2cw_1920%2ch_1080">导航项</a>  
+            <a href="https://img-baofun.zhhainiao.com/pcwallpaper_ugc/static/6911cc8d8802d20627b9a30bdb6f8643.jpg?x-oss-process=image%2fresize%2cm_lfit%2cw_1920%2ch_1080">导航项</a>
+            <a href="https://img-baofun.zhhainiao.com/pcwallpaper_ugc/static/6911cc8d8802d20627b9a30bdb6f8643.jpg?x-oss-process=image%2fresize%2cm_lfit%2cw_1920%2ch_1080">导航项</a>
+            <a href="https://img-baofun.zhhainiao.com/pcwallpaper_ugc/static/6911cc8d8802d20627b9a30bdb6f8643.jpg?x-oss-process=image%2fresize%2cm_lfit%2cw_1920%2ch_1080">导航项</a>
+
+        </div>
+
+
+        </div>
+
+        
+    </div>
+
+<!-- 居中滑动 -->
+
+    <div id="banner">
+
+      <ul id="imglist">
+      <li><a href=""><img src=".\图\园图.jpg" alt=""></a></li>
+      <li><a href=""><img src="\图\OIP (3).jpg" alt=""></a></li>
+      
+      <li><a href=""><img src="https://img-baofun.zhhainiao.com/pcwallpaper_ugc/static/6911cc8d8802d20627b9a30bdb6f8643.jpg?x-oss-process=image%2fresize%2cm_lfit%2cw_1920%2ch_1080" alt=""></a></li>
+      
+      <li><a href=""><img src="https://img-baofun.zhhainiao.com/pcwallpaper_ugc/static/6911cc8d8802d20627b9a30bdb6f8643.jpg?x-oss-process=image%2fresize%2cm_lfit%2cw_1920%2ch_1080" alt=""></a></li>
+      
+      
+      </ul>
+      
+      <ul id="icolist">
+      
+      <li>1</li>
+      
+      <li>2</li>
+      
+      <li>3</li>
+      
+      <li>4</li>
+      
+      </ul>
+      
+      <div class="prev"><</div>
+      
+      <div class="next">></div>
+      
+      </div>
+      
+      <div id="test"></div>
+      
+      <script>
+      
+      var esico = document.getElementById('icolist').getElementsByTagName('li');
+      
+      var eicolist = document.querySelector('#icolist');
+      
+      var eimglist = document.querySelector('#imglist');
+      
+      var etest = document.querySelector('#test');
+      
+      var eprev = document.querySelector('.prev');
+      
+      var enext = document.querySelector('.next');
+      
+      var left = 0;
+      
+      var timer;
+      
+      esico[2].style.backgroundColor = 'red';
+      
+      run();
+      
+      // alert(Math.floor(3190/800));
+      
+      function run(){
+      
+      if (left <= -3200) {
+      
+      left = 0;
+      
+      }
+      
+      var m = Math.floor(-left/800) ;
+      
+      imglist.style.marginLeft = left + 'px';
+      
+      var n = (left % 800 == 0) ? n = 1200 : n = 6;
+      
+      left -= 10;
+      
+      icochange(m);
+      
+      timer = setTimeout(run,n);
+      
+      }
+      
+      function icochange(m){
+      
+      for (let index = 0; index < esico.length; index++) {
+      
+      esico[index].style.backgroundColor = '';
+      
+      }
+      
+      if (m < esico.length) {
+      
+      esico[m].style.backgroundColor = 'red';
+      
+      }
+      
+      }
+      
+      function imgchange(n){
+      
+      let lt = - (n  * 800)
+      
+      imglist.style.marginLeft = lt + 'px';
+      
+      left = lt;
+      
+      }
+      
+      eprev.onclick = function(){
+      
+      let prevgo = Math.floor(-left/800)-1;
+      
+      if (prevgo == -1) {
+      
+      prevgo =3;
+      
+      }
+      
+      imgchange(prevgo);
+      
+      icochange(prevgo);
+      
+      }
+      
+      enext.onclick = function(){
+      
+      let nextgo = Math.floor(-left/800)+1;
+      
+      if (nextgo == 4) {
+      
+      nextgo =0;
+      
+      }
+      
+      imgchange(nextgo);
+      
+      icochange(nextgo);
+      
+      }
+      
+      eicolist.onclick = function(){
+      
+      var tg = event.target;
+      
+      let ico = tg.innerHTML - 1;
+      
+      imgchange(ico);
+      
+      icochange(ico);
+      
+      }
+      
+      eimglist.onmouseover = function(){
+      
+      clearTimeout(timer);
+      
+      }
+      
+      eimglist.onmouseout = function(){
+      
+      run();
+      
+      }
+    //   居中滑动
+      
+      
+      </script>
+
+      <!-- 左图右介绍 -->
+      <section id="home">
+        <img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.FXEGkHbzpgrzOGs8WIf13AHaIU?rs=1&pid=ImgDetMain" alt="示例图片">
+        <div>
+            <h2>欢迎到我的博客</h2>
+            <p>这里是主页内容。在这个示例中，图片位于左侧，而文本描述在右侧。你可以根据需要调整图片和文本的比例以及其他样式。</p>
+        </div>
+    </section>
+    <section id="home">
+        <div>
+            <h2>欢迎到我的博客</h2>
+            <p>这里是主页内容。在这个布局中，详细的文本描述位于左侧，而相关的图片显示在右侧。根据需要，可以调整文本和图片的布比例及样式。</p>
+        </div>
+        <img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.FXEGkHbzpgrzOGs8WIf13AHaIU?rs=1&pid=ImgDetMain" alt="示例图片">
+    </section>
+
+
+<br>1
+<br>1
+<br>1
+<br>1
+<br>1
+<br>1
+<br>1
+<br>1
+<br>1
+<br>1 
+<div class="footer">
+
+    <p>我是网页的底部。</p>
+    
+    </div>
+    
+      
+
+</body>
+
+</html>
+
+
+
+
+
+
+    
