@@ -1,0 +1,207 @@
+/* basic */
+.top {
+    height: 70px;
+    background-color: #242424;
+    /* 源代码中应该还有一个1px的边框，所以height应该是69px，这里直接用border-box把边框的长度算在height里 */
+    box-sizing: border-box;
+    border-bottom: 1px solid #000;
+}
+
+.topbar {
+    /* 浮动布局 */
+    display: flex;
+    /* 让left和right分别处于内容的左右端 */
+    justify-content: space-between;
+    width: 1100px;
+    height: 69px;
+    /* 设置行高，让topbar的子元素继承行高，进而让其子元素内容垂直居中 */
+    line-height: 69px;
+    margin: 0 auto;
+}
+
+.topbar .top-left .logo a{
+    /* 将a变为块级元素，因为text-indent对行内元素无效 */
+    display: block;
+
+    text-indent: -9999px; /* 隐藏超链接的虚线 */
+
+}
+
+
+.topbar .top-left .logo{
+    background-image: url(..\images\太空.jpg);
+
+    width: 157px;
+    height: 69px;
+    
+    height: 100px; /* 假设logo图片的高度为100px */
+    background-size: contain; /* 保持图片比例并且完整显示 */
+}
+
+.topbar .top-left{
+    /* 浮动布局，让logo和列表排列在同一行上 */
+    display: flex;
+}
+
+.topbar .top-left .list{
+    /* 浮动布局，让list的每个li排列在同一行上 */
+    display: flex;
+    padding-left: 20px;
+    font-size: 14px;
+
+}
+
+.topbar .top-left .list .item{
+    color: #ccc;
+    /* 每个a的文本内容距离a的左右边框20px */ 
+    padding: 0 20px;
+    display: block;
+    /* 限制红色小三角的移动空间 */
+    position: relative;
+}
+
+.topbar .top-left .list .item:hover,
+.topbar .top-left .list .item.active{
+    color: #fff;
+    background-color: #000;
+}
+
+.topbar .top-left .list .item.active::after{
+    content: "";
+    position: absolute;
+    background: url(..\images\太空.jpg) -226px 0;
+    /* 引入图片后一定要设置宽高，不然图标无法显示出来 */
+    width: 12px;
+    height: 7px;
+    bottom: -2px;
+    /* 居中 */
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.topbar .top-left .list .icon-hot::after{
+    content: "";
+    position: absolute;
+    background: url(..\images\太空.jpg) -190px 0;
+    width: 28px;
+    height: 19px;
+    /* 到这里上面已经出现了hot标志，下面进行偏移调整到合适的位置 */
+    top: 21px;
+    left: 80px;
+    /* 到这里时，hot标志太靠近“下载客户端了”，调整一下间距 */
+    margin-left: 10px;
+}
+
+.topbar .top-right{
+    display: flex;
+    padding-right: 20px;
+    font-size: 12px;
+    /* 居中 */
+    align-items: center;
+}
+
+/* 登陆 */
+.topbar .top-right .login a{
+    color: #787878;
+}
+
+.topbar .top-right .login:hover a{
+    color: #fff;
+}
+
+.topbar .top-right .login a:hover{
+    color: #787878;
+    text-decoration: underline;
+}
+
+/* 创作者中心 */
+.topbar .top-right .author a{
+    /* 为了设置宽高，将a设置为块级元素 */
+    display: block;
+    box-sizing: border-box;
+    color: #ccc;
+    width: 90px;
+    height: 32px;
+    /* 调整三个div的间距 */
+    margin: 0 20px;
+    /* 边框 */
+    border: 1px solid #4F4F4F;
+    border-radius: 20px;
+    /* 使文字跑到边框的中心处*/
+    line-height: 32px;
+    text-align: center;
+}
+
+/* 鼠标移动到创作者中心处文字和边框高亮 */
+.topbar .top-right .author:hover a{
+    color: #fff;
+    border-color: #fff;
+}
+
+/* 搜索 */
+.topbar .top-right .search{
+    /* 让input输入框浮动到search椭圆框的中间 */
+    display: flex;
+    align-items: center;
+    /* 让input输入框到search框的最后 */
+    justify-content: flex-end;
+    /* 此时input还有一点点在search外面，调整一下使其在search内部 */
+    padding-right: 10px;
+    /* 加入搜索图标后，图标有一部分被挡住了，在下面设置一下input框的长度 */
+    background: url(..\images\太空.jpg) 0 -99px;
+    /* search椭圆框基本设置 */
+    width: 158px;
+    height: 32px;
+    border-radius: 30px;
+    background-color: #fff;
+}
+
+.topbar .top-right .search input{
+    width: 118px;
+    font-size: 12px;
+}
+
+/* bottom */
+.bottom{
+    /* 背景设置 */
+    height: 35px;
+    background-color: #C20C0C;
+    border-bottom: 1px solid #a40011;
+    box-sizing: border-box;
+    /* 让子元素继承行高，使list元素中的文字居中 */
+    line-height: 35px;
+}
+
+.botbar{
+	/* 与顶部列表对齐*/
+    padding-left: 183px;
+    box-sizing: border-box;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+
+.botbar .list{
+    /* 让list子元素浮动到一行排列 */
+    display: flex;
+}
+
+.botbar .list .item span{
+    /* span是行内元素，不能设置宽高，将其转换为块级元素 */
+    display: block;
+    /* 调整间距 */
+    padding: 0 13px;
+    margin: 7px 17px;
+    height: 20px;
+    /* 居中 */
+    line-height: 20px;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 21px;
+}
+
+.botbar .list .item:hover span,
+.botbar .list .item.active span{
+    background-color: #9B0909;
+}
