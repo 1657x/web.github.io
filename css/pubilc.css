@@ -1,0 +1,36 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+a {
+   color: #000000;
+   text-decoration: none;
+}
+
+ul,li {
+   list-style: none;
+}
+
+html,body {
+   font-family: Arial,'宋体';
+   box-sizing: border-box;
+   font-size: 90.5%;
+}
+
+*,* :before,*:after {
+   box-sizing: inherit;
+}
+
+img {
+   border: none;
+}
+
+input,button,a {
+   outline: none;
+}
+
+.container {
+   width: 1000px;
+   margin: 0 auto;
+}

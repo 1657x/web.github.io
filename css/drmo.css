@@ -1,0 +1,37 @@
+.header {
+   background: url(../image/cha_2.jpg) center center / 1700px;
+   height: 250px;
+}
+
+.header h1 {
+   font-family: "微软雅黑";
+   padding: 0;
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: #006400;
+   -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+   font-size: 2.5rem;
+}
+
+.nav ul {
+   height:40px;
+   background: url(../image/cha_2.jpg) center center / 9000px;
+}
+
+.nav ul li {
+   float: left;
+   text-align: center;
+   margin: 8px;
+   line-height: 25px;
+}
+
+.nav ul li a {
+   display: block;
+   padding: 0 13px;
+   font-size: 1.6em;
+   color: #F27602;
+}
+
+.nav ul li a:hover{
+   color: #FFFFFF;
+   background: #0a0 ;
+}
