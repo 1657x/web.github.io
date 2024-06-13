@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>61</title>
+    <style>
+        .profile-pic {
+            display: block;
+            margin: 20px auto;
+            width: 100px;  
+            height: 100px;
+            border-radius: 50%; 
+            overflow: hidden;
+        }
+        nav {
+            text-align: center; 
+            margin-top: 20px;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #120505; 
+            text-decoration: none;  
+            font-size: 18px;  
+        }
+        nav a:hover {
+            text-decoration: underline;  
+        }
+        footer {
+            padding: 6px;
+            color: #0f0202; 
+            text-align: center; 
+            width: 100%;
+        }
+        footer a {
+            color: #1179a9; 
+            text-decoration: none; 
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }        
+        body {
+            margin: 0;
+            background: linear-gradient(to bottom, #003366 0%, #66ccff 100%);
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        #snow {
+            height: 100vh;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+        }
+        .container {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
+        header, section {
+            margin: 20px;
+            padding: 20px;
+            background: rgba(0,0,0,0.5);
+        }
+        body #snow > div {
+            position: absolute;
+            top: 0;
+            left: calc(var(--position) - 20%);
+            width: calc(var(--size) * 15px);
+            aspect-ratio: 1;
+            background: radial-gradient(white, transparent 66%);
+            -webkit-animation: var(--fallDuration) snowFall linear forwards;
+            animation: var(--fallDuration) snowFall linear forwards;
+        }
+        @-webkit-keyframes snowFall {
+            to {
+                top: 100%;
+                transform: translateX(calc(var(--cWidth) * var(--fallSlideStrength) / 8));
+            }
+        }
+        @keyframes snowFall {
+            to {
+                top: 100%;
+                transform: translateX(calc(var(--cWidth) * var(--fallSlideStrength) / 8));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="snow"></div>
+    <div class="container">
+        <img src="雪山.jpeg" alt="Profile Picture" class="profile-pic">
+        <nav>
+            <a href="#">首页</a>
+            <a href="介绍61.html">关于我</a>
+            <a href="登录61.html">登录</a>
+        </nav>
+        <h1></h1>
+        <p></p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <footer>
+        <p>版权所有 © 2024 我的个人博客</p>
+    </footer>
+    <script>
+        const maxSnowflakes = 1000,
+        snowflakes = [],
+        container = document.getElementById("snow");
+        console.clear();
+        let isRunning = true;
+        const generatesnowFlake = (timeout = 0, init = false) => {
+            const duration = 3000 + Math.random() * 7000,
+            flake = document.createElement("div"),
+            id = crypto.randomUUID(),
+            delay = init ? Math.random() * duration : 0;
+            snowflakes.push(id);
+            setTimeout(() => {
+                flake.setAttribute("id", id);
+                flake.setAttribute(
+                    "style",
+                    `
+                    animation-delay: -${delay}ms;
+                    --fallDuration: ${duration}ms;
+                    --fallSlideStrength: ${Math.random()};
+                            
+                    --size: ${Math.random() * 0.7 + 0.3};
+                    --position: ${Math.random() * 120}%;
+                    `
+                );
+                container.appendChild(flake);
+                setTimeout(() => {
+                    const index = snowflakes.findIndex((e) => e === id);
+                    snowflakes.splice(index, index);
+                    container.removeChild(flake);
+                }, duration - delay);
+            }, timeout);
+        };
+        container.setAttribute("style", `--cWidth: ${container.clientWidth}px`);
+        addEventListener("resize", () =>
+            container.setAttribute("style", `--cWidth: ${container.clientWidth}px`)
+        );
+        const loop = async () => {
+            while (1) {
+                await new Promise(async (resolve) => {
+                    if (isRunning && snowflakes.length < maxSnowflakes && !document.hidden) {
+                        requestAnimationFrame(() => {
+                            generatesnowFlake(Math.random() * 50);
+                            resolve();
+                        });
+                    } else {
+                        setTimeout(resolve, 50);
+                    }
+                });
+            }
+        },
+        init = () => {
+            for (let i = 0; i < (maxSnowflakes - snowflakes.length) / 2; i++) {
+                generatesnowFlake(Math.random() * 50, true);
+            }
+        };
+        init();
+        loop();
+        document.onvisibilitychange = (e) => {
+            isRunning = !document.hidden;
+            if (isRunning) init();
+        };
+    </script>
+</body>
+</html>
