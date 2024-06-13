@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>X</title>
+    <style>
+
+
+        body {
+            background-image: url('https://tse4-mm.cn.bing.net/th/id/OIP-C.Ml2f_B_9XRMXLi2h2U6eswHaE2?rs=1&pid=ImgDetMain');
+        }
+
+        /* 对于小屏幕设备，调整背景图片的大小以减少失真 */
+        @media (max-width: 768px) {
+            body {
+                background-size: contain;
+            }
+        }
+        *{
+
+            margin: 0;
+
+            padding: 0;
+
+            text-decoration: none;
+
+            list-style: none;
+
+        }
+
+
+
+    
+        .div1{
+            max-width: 666px; 设置最大宽度
+            margin: auto; 让div居中
+        }  
+
+        .nav{
+            float: left;
+            width: 100%;
+            box-sizing: border-box;
+            background-size: cover; 
+            background-color: rgba(255, 255, 255, 0); 
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+
+        }
+
+        @media (max-width: 768px) {
+        body {
+            background-size: contain;
+        }
+
+        .nav {
+            float: none; /* 不使用 float，改为默认的 block 布局 */
+            overflow-x: auto;
+            white-space: nowrap; /* 保持所有导航项在同一行 */
+            text-align: center; /* 确保导航链接居中显示 */
+        }
+
+        .div1 {
+            width: 100%; /* 在小屏幕上宽度设为100% */
+            margin: 0 auto; /* 水平居中 */
+            text-align: center; /* 文本居中 */
+        }
+    }
+
+
+        /* @media (max-width: 768px) {
+    .nav {
+        overflow-x: auto;
+        white-space: nowrap; /* 保持所有导航项在同一行 */
+        /* text-align: center;
+        }
+    } */ 
+
+
+
+        .nav a:hover{
+
+            background: #ce4924;
+            color: #04f90c;
+
+        }
+
+        .nav a{
+
+            color: #030114;
+
+            padding: 10px 20px;
+
+            display: inline-block;
+        }
+
+        .logo img {
+            max-width: 60px; 
+            height: auto;
+            border-radius: 50%; 
+        }
+
+
+
+
+        #banner{
+
+            width: 800px;
+
+            height: 400px;
+
+            overflow: hidden;
+
+            border: 2px solid #999;
+
+            position: relative;
+            margin: 0 auto;
+
+        }
+
+        #banner img{
+
+            width: 800px;
+
+            height: 400px;
+
+        }
+
+        #imglist{
+
+            width: 4000px;
+
+            height: 400px;
+
+        }
+
+        #imglist li{
+
+            float: left;
+
+        }
+
+        #icolist{
+
+            position: absolute;
+
+            right: 10px;
+
+            bottom: 10px;
+
+        }
+
+        #icolist li{
+
+            float: left;
+
+            width: 30px;
+
+            height: 30px;
+
+            border-radius: 50%;
+
+            background: #666;
+
+            color: #fff;
+
+            margin-left: 5px;
+
+            text-align: center;
+
+            line-height: 30px;
+
+            cursor: pointer;
+
+        }
+
+        .prev{
+
+            background:rgba(102, 102, 102, 0.5);
+
+            height: 40px;
+
+            width: 30px;
+
+            position: absolute;
+
+            left: 5px;
+
+            top: 45%;
+
+            color: #f6f3f3;
+
+            line-height: 40px;
+
+            text-align: center;
+
+            cursor: pointer;
+
+        }
+
+        .next{
+
+            background: rgba(102, 102, 102, 0.5);
+
+            height: 40px;
+
+            width: 30px;
+
+            position: absolute;
+
+            right: 5px;
+
+            top: 45%;
+
+            color: #f8f3f3;
+
+            line-height: 40px;
+
+            text-align: center;
+
+            cursor: pointer;
+
+        }
+
+        .footer{
+
+            padding: 10px;
+
+            background: #fefefe;
+
+            text-align: center;
+
+        }
+
+        #home {
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+        }
+
+        #home img {
+            width: 300px; 
+            margin-right: 20px; 
+        }
+
+        #home div {
+            width: 50%;
+        }
+
+
+
+
+
+
+
+    </style>
+
+
+
+</head>
+
+    <body>
+
+        <div class="div1">
+        
+            <div class="nav">
+                <div class="logo">
+                    <img src="tou.jpg" alt="Logo">
+                <a href="个61.html">孙海平</a>
+                <a href="#">陈威</a>
+                <a href="lzw33.html">林志伟</a>  
+                <a href="#">尹财富</a>
+                <a href="#">导航项</a>
+                <a href="#">导航项</a>
+
+            </div>
+
+
+            </div>
+
+            
+        </div>
+
+
+        <div id="banner">
+
+            <ul id="imglist">
+            <li><a href=""><img src="https://pica.zhimg.com/80/v2-1a4210591603423e89f0c67e84f3c91c_720w.webp" alt=""></a></li>
+            <li><a href=""><img src="https://pic2.zhimg.com/v2-dd1474029edce8f35236785e7b09afab_r.jpg" alt=""></a></li>
+            <li><a href=""><img src="https://pic3.zhimg.com/80/v2-0fa0a5762be6556f23dd448c28c493ee_720w.webp" alt=""></a></li>
+            <li><a href=""><img src="https://picx.zhimg.com/80/v2-308edd0ce4aa110f4d887b820722e5cb_720w.webp" alt=""></a></li>
+            
+            
+            </ul>
+            
+            <ul id="icolist">
+            
+            <li>1</li>
+            
+            <li>2</li>
+            
+            <li>3</li>
+            
+            <li>4</li>
+            
+            </ul>
+            
+            <div class="prev"><</div>
+            
+            <div class="next">></div>
+            
+        </div>
+            
+            <div id="test"></div>
+            
+            <script>
+            
+            var esico = document.getElementById('icolist').getElementsByTagName('li');
+            
+            var eicolist = document.querySelector('#icolist');
+            
+            var eimglist = document.querySelector('#imglist');
+            
+            var etest = document.querySelector('#test');
+            
+            var eprev = document.querySelector('.prev');
+            
+            var enext = document.querySelector('.next');
+            
+            var left = 0;
+            
+            var timer;
+            
+            esico[2].style.backgroundColor = 'red';
+            
+            run();
+            
+            
+            function run(){
+            
+            if (left <= -3200) {
+            
+            left = 0;
+            
+            }
+            
+            var m = Math.floor(-left/800) ;
+            
+            imglist.style.marginLeft = left + 'px';
+            
+            var n = (left % 800 == 0) ? n = 1200 : n = 6;
+            
+            left -= 10;
+            
+            icochange(m);
+            
+            timer = setTimeout(run,n);
+            
+            }
+            
+            function icochange(m){
+            
+            for (let index = 0; index < esico.length; index++) {
+            
+            esico[index].style.backgroundColor = '';
+            
+            }
+            
+            if (m < esico.length) {
+            
+            esico[m].style.backgroundColor = 'red';
+            
+            }
+            
+            }
+            
+            function imgchange(n){
+            
+            let lt = - (n  * 800)
+            
+            imglist.style.marginLeft = lt + 'px';
+            
+            left = lt;
+            
+            }
+            
+            eprev.onclick = function(){
+            
+            let prevgo = Math.floor(-left/800)-1;
+            
+            if (prevgo == -1) {
+            
+            prevgo =3;
+            
+            }
+            
+            imgchange(prevgo);
+            
+            icochange(prevgo);
+            
+            }
+            
+            enext.onclick = function(){
+            
+            let nextgo = Math.floor(-left/800)+1;
+            
+            if (nextgo == 4) {
+            
+            nextgo =0;
+            
+            }
+            
+            imgchange(nextgo);
+            
+            icochange(nextgo);
+            
+            }
+            
+            eicolist.onclick = function(){
+            
+            var tg = event.target;
+            
+            let ico = tg.innerHTML - 1;
+            
+            imgchange(ico);
+            
+            icochange(ico);
+            
+            }
+            
+            eimglist.onmouseover = function(){
+            
+            clearTimeout(timer);
+            
+            }
+            
+            eimglist.onmouseout = function(){
+            
+            run();
+            
+            }
+            
+            
+            </script>
+                                                <br>
+
+            <section id="home">
+                <img src="https://th.bing.com/th/id/OIP.LLiJvC9lvWyuPMKGpS60qwHaHa?rs=1&pid=ImgDetMain" alt="0">
+                <div>
+                    <h2>野原新之助</h2>
+                    <p>日本漫画《蜡笔小新》及其衍生作品中的男主角。一般称作小新、新之助，2002年剧场版《蜡笔小新：呼风唤雨！壮烈！战国大合战》中，名字日文汉字写法为“野原信之介”。</p>
+                </div>
+            </section>
+            <section id="home">
+                <div>
+                    <h2>野原一家</h2>
+                    <p>野原一家，日本漫画《蜡笔小新》及其衍生作品中的家庭团队， [1]故事人物中分别有爸爸野原广志、妈妈野原美冴、儿子野原新之助、女儿野原向日葵、宠物野原小白组成。</p>
+                </div>
+                <img src="https://th.bing.com/th/id/OIP.nD-3Tco9dmvgFs0A_4y2UwHaFP?rs=1&pid=ImgDetMain" alt="0">
+            </section>
+                                                        <br>
+                                                        <br>
+                                                        <br>
+
+
+            <div class="footer">
+
+              <p>网页的底部</p>
+        
+            </div>
+    </body>
+
+</html>
+
+
+
+
+
+
+    
